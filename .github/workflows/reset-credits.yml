@@ -3,7 +3,8 @@ name: 88code 每日重置额度
 on:
     schedule:
         # 每天15:45 UTC时间执行 (北京时间23:45) - github actions 执行时间有延迟，避开高峰
-        - cron: "45 15 * * *"
+        - cron: "30 10 * * *"   # 北京 18:30
+        - cron: "45 15 * * *"   # 北京 23:45
     workflow_dispatch: # 允许手动触发
 jobs:
     reset-credits:
